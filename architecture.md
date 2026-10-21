@@ -33,7 +33,7 @@ User Input (Streamlit)
 
 | Component       | Technology                        |
 |-----------------|-----------------------------------|
-| LLM             | groq/llama-3.1-8b-instant         |
+| LLM             | Groq openai/gpt-oss-20b           |
 | Embeddings      | all-MiniLM-L6-v2 (SentenceTransformers) |
 | Vector DB       | ChromaDB (in-memory)              |
 | Graph Framework | LangGraph (StateGraph)            |

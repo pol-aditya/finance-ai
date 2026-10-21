@@ -32,7 +32,7 @@ def build_chromadb(embedder: SentenceTransformer) -> chromadb.Collection:
     ids = [doc["id"] for doc in DOCUMENTS]
     texts = [doc["text"] for doc in DOCUMENTS]
     metadatas = [{"topic": doc["topic"]} for doc in DOCUMENTS]
-    embeddings = embedder.encode(texts, convert_to_list=True)
+    embeddings = embedder.encode(texts).tolist()
 
     collection.add(
         ids=ids,
@@ -54,7 +54,7 @@ def retrieve(
     """
     Embed question, query ChromaDB, return (context_string, source_list).
     """
-    query_embedding = embedder.encode([question], convert_to_list=True)[0]
+    query_embedding = embedder.encode([question]).tolist()[0]
 
     results = collection.query(
         query_embeddings=[query_embedding],

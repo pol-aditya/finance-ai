@@ -188,7 +188,7 @@ The 10 documents in `knowledge_base/documents.py` cover:
 
 | Layer | Technology |
 |-------|-----------|
-| LLM | Groq `llama-3.1-8b-instant` (free tier) |
+| LLM | Groq `openai/gpt-oss-20b` (override with `GROQ_MODEL`) |
 | Agent Framework | LangGraph `StateGraph` |
 | Embeddings | `all-MiniLM-L6-v2` (SentenceTransformers) |
 | Vector DB | ChromaDB (in-memory) |
